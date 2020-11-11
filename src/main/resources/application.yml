@@ -2,7 +2,7 @@ spring:
   main:
     allow-bean-definition-overriding: true  # 이 설정은 동일한 이름을 가진 스프링 빈이 등록되려고 하면 BeanDefinitionOverrideException을 발생
   datasource:
-    url: jdbc:h2:tcp://localhost/~/querydsl;MVCC=TRUE
+    url: jdbc:h2:tcp://localhost/~/querydsl
     username: sa
     password:
     driver-class-name: org.h2.Driver
@@ -16,5 +16,11 @@ spring:
       ddl-auto: create  # 이 옵션은 애플리케이션 실행 시점에 테이블을 drop 하고, 다시 생성한다
     properties:
       hibernate:
-        show_sql: false
-        # format_sql: true
+#        show_sql: true
+        format_sql: true
+
+server:
+  port: 8081
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.trace: trace

@@ -35,6 +35,7 @@ public class Member {
         if(team != null){
             changeTeam(team);
         }
+        // else 값이라면 그냥 null로 마무리시키도록 구현.
     }
 
     private void changeTeam(Team team) {
