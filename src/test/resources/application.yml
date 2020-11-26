@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: local
+    active: test
   main:
     allow-bean-definition-overriding: true  # 이 설정은 동일한 이름을 가진 스프링 빈이 등록되려고 하면 BeanDefinitionOverrideException을 발생
   datasource:
